@@ -1,7 +1,26 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Home() {
-  return <HomeContainer></HomeContainer>;
+  const navigate = useNavigate();
+
+  const toCreatePostPage = (e: React.MouseEvent<HTMLButtonElement>) => {
+    navigate("/createpost");
+  };
+
+  return (
+    <HomeContainer>
+      <CreatePostBtn onClick={toCreatePostPage}>게시글 작성하기</CreatePostBtn>
+    </HomeContainer>
+  );
 }
 
 export const HomeContainer = styled.div``;
+
+export const CreatePostBtn = styled.button`
+  width: 120px;
+  border: 1px solid gray;
+  border-radius: 4px;
+  background-color: white;
+`;
