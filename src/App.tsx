@@ -8,6 +8,7 @@ import UpdatePost from "./page/UpdatePost";
 import NaverLoginRedirectHandler from "./util/NaverLoginRedirectHandler";
 import KakaoLoginRedirectHandler from "./util/KakaoLoginRedirectHandler";
 import Header from "./component/Header";
+import PostDetail from "./page/PostDetail";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/createpost" element={<CreatePost />} />
         <Route path="/updatepost" element={<UpdatePost />} />
+        <Route path="/post" element={<PostDetail />} />
         <Route path="/auth/naver/callback" element={<NaverLoginRedirectHandler />} />
         <Route path="/auth/kakao/callback" element={<KakaoLoginRedirectHandler />} />
       </Routes>

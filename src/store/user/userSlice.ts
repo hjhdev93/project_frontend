@@ -28,6 +28,9 @@ interface deleteUserInfo extends LogoutUserInfo {}
 //  네이버 로그인 요청
 export const naverLogin = createAsyncThunk("users/naverLogin", async (code: string | null) => {
   try {
+    console.log(code);
+    console.log(`${process.env.REACT_APP_NAVER_STATE}`);
+
     const response = await axios.post(
       `${process.env.REACT_APP_URL}/auth/naver/login/${code}/${process.env.REACT_APP_NAVER_STATE}`
     );
