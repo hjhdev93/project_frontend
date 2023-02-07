@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import PostList from "../component/PostList";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <HomeContainer>
       <CreatePostBtn onClick={toCreatePostPage}>게시글 작성하기</CreatePostBtn>
+      <PostList />
     </HomeContainer>
   );
 }
